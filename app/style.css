@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+:root{
+    --Marineblue: hsl(213, 96%, 18%);
+    --Purplishblue: hsl(243, 100%, 62%);
+    --Pastelblue: hsl(228, 100%, 84%);
+    --Lightblue: hsl(206, 94%, 87%);
+    --Strawberryred: hsl(354, 84%, 57%);
+    --Coolgray: hsl(231, 11%, 63%);
+    --Lightgray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,*::after,*::before {
+     box-sizing: border-box;
+}
+
+body{
+    padding: .31rem;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    grid-template-columns: .31fr 1fr;
+}
+
+.sidebar{
+    height: 98.5vh;
+    background-image:url('../assets/images/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 4rem ;
+    border-radius: 10px;
+    animation: 2s display;
+}
+
+.sidebar > div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+   
+}
+.sidebar > div  h3{
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.sidebar > div  h3:nth-child(1){
+  color: rgb(221, 214, 214);
+}
+.sidebar > div  h3:nth-child(2){
+    font-weight: 500;
+  }
+.sidebar > div div:nth-child(1){
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: rgb(235, 229, 229);
+    display: grid;
+    place-items: center;
+}
+
+
+/* main section */
+
+.main{
+    display: grid;
+    justify-items: center;
+}
+
+.main .plans{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.main .plan>h1{
+    margin-bottom: 0;
+}
+.main .plan>p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.main .content{
+    animation: 2s display;
+    width: 70%;
+    height: 60vh;
+}
+
+.main .plans >div{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 180px;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid rgb(219, 215, 215);
+    transition: all .2s ease-in-out;
+}
+.main .plans >div:hover{
+    transform: scale(1.03);
+    border: 2px solid var(--Coolgray);
+}
+.main .plans >div img{
+    align-self: flex-start;
+}
+.main .plans >div h3{
+    margin-bottom: 0;
+}
+.main .plans >div p{
+    margin-top: 0;
+    color: rgb(184, 177, 177);
+}
+
+
+.main .infoSection{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+}
+
+.main .infoSection h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+.main .infoSection p
+{
+    color: rgb(179, 175, 175);
+    margin-top: 0rem;
+}
+.main .infoSection input{
+    margin-bottom: 1.5rem;
+    outline: none;
+    border: 1px solid rgb(201, 196, 196);
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.main .infoSection label{
+    margin-bottom: 0rem;
+}
+
+.main .btns{
+    margin-right: 10rem;
+    position: relative;
+    bottom: 7rem;
+    place-self: end;
+}
+.main .btns button{
+    cursor: pointer;
+    padding: .7rem 1.5rem;
+    color: #fff;
+    font-family: inherit;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--Marineblue);
+}
+
+.main .toggle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    background-color: var(--Magnolia);
+    place-self: start;
+    margin-right: auto;
+}
+.main .toggle h4{
+    color: rgb(146, 142, 142);
+}
+.main .toggle .toggle-btn{
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    position: relative;
+    width: 55px;
+    height: 23px;
+    border-radius: 15px;
+    background-color: var(--Marineblue);
+}
+.main .toggle .toggle-btn input{
+    opacity: 0;
+}
+.main .toggle .toggle-btn span{
+    position: absolute;
+    width: 20px;
+    left: 0.09rem;
+    background-color: white;
+    height: 20px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+
+.main .twobtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    place-self: start;
+    width: 60%;
+    margin-left: 7.6rem;
+}
+
+.main .twobtns button{
+    font-weight: bolder;
+    border: none;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    background-color: rgb(15, 15, 65);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+.main .twobtns button.back{
+    background-color: transparent;
+    color: rgb(236, 65, 65);
+}
+.main .twobtns button.back:hover{
+    color: rgb(17, 17, 63);
+}
+.main .twobtns button.next:hover{
+    background-color: var(--Purplishblue);
+}
+
+
+.main .content .services{
+    display: grid;
+    width: 90%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+.main .content .services h4{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.main .content .services p{
+    color: rgb(146, 142, 142);
+    margin-top: 0;
+}
+.main .content .services > div input{
+    transform: scale(2);
+    background-color: blue;
+    cursor: pointer;
+}
+
+.main .content .services > div{
+    cursor: pointer;
+    padding:.5rem 1rem;
+    background-color: var(--Alabaster);
+    display: grid;
+    grid-template-columns: .3fr 1fr .4fr;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid var(--Purplishblue);
+}
+
+.main .content .services > div:hover{
+    background-color: var(--White);
+}
+
+
+.main .content .checkout{
+    background-color: #eee;
+    width: 80%;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+}
+.main .content  .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.main .content .checkout > div{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.main .content .checkout > div:first-child{
+    border-bottom: 1px solid #333;
+}
+
+@keyframes display {
+    0%{
+        opacity: 0;
+        transform: scale(.7);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
